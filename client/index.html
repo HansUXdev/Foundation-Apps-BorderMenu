@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Angular</title>
+    <link href="/assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="/assets/js/dependencies.js"></script>
+    <script src="/assets/js/routes.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+  </head>
+  <body>
+    <div class="grid-frame vertical">
+      <div class="grid-content shrink" style="padding: 0;">
+        <!-- Toggle Class -->
+        <nav id="border-menu"
+          ng-class="{'border-menu': !isActive, 'border-menu  border-menu-open': isActive}"
+          ng-init="isActive = false"
+          ng-click="isActive = !isActive">
+          
+            <ul class="dark condense menu-bar">
+              <!-- <div class="block-grid small-6 medium-6 large-6"></div> -->
+              <div class="block-grid large-1"></div>
+              <li>
+                <a href="#" id="menu-trigger" class="border-menu-trigger"><span></span></a>
+              </li>
+              
+              <li><a><strong>Foundation for Apps</strong></a></li>
+              <div class="block-grid small-7 medium-3 large-1"></div>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contact</a></li>
+              <div class="block-grid"></div>
+              <!-- <div class="block-grid"></div> -->
+            </ul>
+
+            <ul class="top">
+              <li><a href="https://plus.google.com/101095823814290637419" ><i class="fi-social-google-plus"></i>+</a></li>
+              <li><a href="http://www.facebook.com/pages/Codrops/159107397912" ><i class="fi-social-facebook"></i></a></li>
+              <li><a href="https://github.com/hansuxdev" ><i class="fi-social-github"></i></a></li>
+            </ul>
+
+            <ul class="bottom">
+              <li><a href="https://plus.google.com/101095823814290637419" ><i class="fi-social-google-plus"></i></a></li>
+              <li><a href="http://www.facebook.com/pages/Codrops/159107397912" ><i class="fi-social-facebook"></i></a></li>
+              <li><a href="https://github.com/hansuxdev" ><i class="fi-social-github"></i></a></li>
+            </ul>
+
+            <ul class="left">
+              <!-- Add Logo -->
+              <li>
+                <a href="index.html" class="">Home</a>
+              </li>
+              <li>
+                <a href="#" class="">Work</a>
+              </li>
+              <li>
+                <a href="#" class="">Clients</a>
+              </li>
+              <li>
+                <a href="#" class="">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="">Contact</a>
+              </li>
+            </ul>
+        </nav>
+      </div>
+      <div class="grid-content">
+        <div class="grid-container">
+          <div ng-class="['ui-animation']" ui-view></div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
